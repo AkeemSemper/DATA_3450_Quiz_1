@@ -1,2 +1,1 @@
-# AsnTemplate
-Template for Assignment Repositories
+# Quiz 1 Template
