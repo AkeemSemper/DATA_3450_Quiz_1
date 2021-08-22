@@ -13,3 +13,4 @@ import-ipynb
 thinkx
 ipython
 nbformat
+httpimport
