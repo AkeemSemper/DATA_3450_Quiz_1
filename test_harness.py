@@ -3,6 +3,7 @@ import thinkplot
 import thinkstats2
 import pandas as pd
 import numpy as np
+import pytest
 
 #Import solution file
 import import_ipynb
@@ -32,32 +33,38 @@ column_high = "Earnings_1978"
 #Age Count
 low_age = 18
 high_age = 35
+columnNameAge = "Age"
 #cohort
 cohort1 = "Race"
 cohort2 = "Hisp"
 cohort3 = "MaritalStatus"
 earningsColumn = "Earnings_1978"
 
+@pytest.mark.a
 def test_rangeMag():
     studAnswer = solution_file.rangeMag(df_in, columnNameRange)
     solAnswer = stats_Quiz1_sol.rangeMag(df_in, columnNameRange)
     assert (studAnswer == solAnswer)
 
+@pytest.mark.b
 def test_earnedAbove():
-    studAnswer = solution_file.earnedAbove(df_in, amount, columnNameAbove)
-    solAnswer = stats_Quiz1_sol.earnedAbove(df_in, amount, columnNameAbove)
+    studAnswer = solution_file.earnedAbove(df_in, columnNameAge, amount, columnNameAbove)
+    solAnswer = stats_Quiz1_sol.earnedAbove(df_in, columnNameAge, amount, columnNameAbove)
     assert (studAnswer == solAnswer)
 
+@pytest.mark.c
 def test_difference_74_78():
     studAnswer = solution_file.difference_74_78(df_in, column_low, column_high)
     solAnswer = stats_Quiz1_sol.difference_74_78(df_in, column_low, column_high)
     assert (studAnswer == solAnswer)
 
+@pytest.mark.d
 def test_ageCount():
     studAnswer = solution_file.ageCount(df_in, low_age, high_age)
     solAnswer = stats_Quiz1_sol.ageCount(df_in, low_age, high_age)
     assert (studAnswer == solAnswer)
 
+@pytest.mark.e
 def test_cohort():
     studAnswer = solution_file.cohort(df_in, cohort1, cohort2, cohort3, earningsColumn)
     solAnswer = stats_Quiz1_sol.cohort(df_in, cohort1, cohort2, cohort3, earningsColumn)

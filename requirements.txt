@@ -14,3 +14,4 @@ thinkx
 ipython
 nbformat
 httpimport
+pytest
