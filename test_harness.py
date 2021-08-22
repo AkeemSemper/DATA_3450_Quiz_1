@@ -48,8 +48,8 @@ def test_rangeMag():
 
 @pytest.mark.b
 def test_earnedAbove():
-    studAnswer = solution_file.earnedAbove(df_in, columnNameAge, amount, columnNameAbove)
-    solAnswer = stats_Quiz1_sol.earnedAbove(df_in, columnNameAge, amount, columnNameAbove)
+    studAnswer = solution_file.earnedAbove(df_in, amount, columnNameAbove)
+    solAnswer = stats_Quiz1_sol.earnedAbove(df_in, amount, columnNameAbove)
     assert (studAnswer == solAnswer)
 
 @pytest.mark.c
@@ -60,8 +60,8 @@ def test_difference_74_78():
 
 @pytest.mark.d
 def test_ageCount():
-    studAnswer = solution_file.ageCount(df_in, low_age, high_age)
-    solAnswer = stats_Quiz1_sol.ageCount(df_in, low_age, high_age)
+    studAnswer = solution_file.ageCount(df_in, columnNameAge, low_age, high_age)
+    solAnswer = stats_Quiz1_sol.ageCount(df_in, columnNameAge, low_age, high_age)
     assert (studAnswer == solAnswer)
 
 @pytest.mark.e
