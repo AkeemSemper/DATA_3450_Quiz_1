@@ -77,8 +77,8 @@ def test_cohort():
     #assert (studAnswer == solAnswer)
 
 #
-test_rangeMag()
-test_earnedAbove()
-test_difference_74_78()
-test_ageCount()
-test_cohort()
+#test_rangeMag()
+#test_earnedAbove()
+#test_difference_74_78()
+#test_ageCount()
+#test_cohort()
